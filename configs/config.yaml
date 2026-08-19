@@ -1,0 +1,41 @@
+project_name: "Realistic Image to Comic Translation"
+
+base_model: "stabilityai/stable-diffusion-xl-base-1.0"
+
+lora_path: "models/comic_sdxl_lora_500.safetensors"
+
+resolution: 768
+
+strength: 0.45
+
+guidance_scale: 7.0
+
+num_inference_steps: 20
+
+seed: 42
+
+prompt: >
+  comic book illustration of the same person,
+  preserve facial identity, facial structure and expression,
+  modern western comic book artwork,
+  bold black ink linework,
+  clean outlines,
+  vibrant colors,
+  detailed cel shading,
+  high quality comic illustration
+
+negative_prompt: >
+  photorealistic,
+  photograph,
+  3d render,
+  CGI,
+  anime,
+  chibi,
+  distorted face,
+  deformed face,
+  extra eyes,
+  extra ears,
+  extra limbs,
+  malformed hands,
+  blurry,
+  low quality

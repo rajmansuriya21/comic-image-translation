@@ -1,0 +1,30 @@
+Final Model:
+SDXL + LoRA-500 (2 GPU)
+
+Resolution:
+768x768
+
+Precision:
+FP16
+
+Inference Steps:
+20
+
+Strength:
+0.45
+
+Guidance:
+7
+
+Latency:
+13.85 seconds/image
+
+Peak allocated VRAM:
+5.81 GB
+
+Peak reserved VRAM:
+6.18 GB
+
+Estimated cost per image:
+GPU hourly cost × (13.85 / 3600) hours
+Example: $1.00/hr GPU → $0.0038/image

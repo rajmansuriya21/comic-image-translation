@@ -1,0 +1,33 @@
+base_model: "stabilityai/stable-diffusion-xl-base-1.0"
+
+dataset:
+  total_pairs: 600
+  train_pairs: 480
+  validation_pairs: 60
+  test_pairs: 60
+  seed: 42
+
+training:
+  resolution: 768
+  batch_size_per_device: 1
+  gradient_accumulation_steps: 4
+  learning_rate: 0.0001
+  scheduler: "constant"
+  warmup_steps: 0
+  max_train_steps: 500
+  checkpointing_steps: 250
+  mixed_precision: "fp16"
+  optimizer: "8bit_adam"
+
+distributed:
+  num_gpus: 2
+  num_processes: 2
+  backend: "nccl"
+
+augmentation:
+  center_crop: true
+  random_flip: true
+
+output:
+  directory: "models/training_output"
+  final_checkpoint: 500
